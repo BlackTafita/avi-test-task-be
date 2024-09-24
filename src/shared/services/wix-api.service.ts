@@ -62,7 +62,6 @@ export class WixApiService {
   }
 
   async createProduct(product: any): Promise<any> {
-    console.log(product);
     //@ts-expect-error No typification found for wixClient
     return this.wixClient?.products.createProduct(product);
   }

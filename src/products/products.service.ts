@@ -56,6 +56,10 @@ export class ProductsService {
       name: dto.name && dto.name,
       description: dto.description && dto.description,
       priceData: dto.price && { price: dto.price },
+      productOptions: dto.variants.map((el) => ({
+        name: el.name,
+        choices: el.options.map((o) => ({ value: o, description: o })),
+      })),
     };
   }
 }

@@ -1,4 +1,11 @@
-import { IsNotEmpty, IsNumber, IsOptional, IsString } from 'class-validator';
+import {
+  IsArray,
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsString,
+} from 'class-validator';
+import { VariantDto } from './variants.dto';
 
 export class ProductCreateDto {
   @IsString()
@@ -12,4 +19,7 @@ export class ProductCreateDto {
   @IsNumber()
   @IsNotEmpty()
   price: number;
+
+  @IsArray()
+  variants: VariantDto[];
 }

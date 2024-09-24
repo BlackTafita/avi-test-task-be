@@ -1,4 +1,5 @@
-import { IsNumber, IsOptional, IsString } from 'class-validator';
+import { IsArray, IsNumber, IsOptional, IsString } from 'class-validator';
+import { VariantDto } from './variants.dto';
 
 export class ProductEditDto {
   @IsString()
@@ -12,4 +13,7 @@ export class ProductEditDto {
   @IsNumber()
   @IsOptional()
   price: number;
+
+  @IsArray()
+  variants: VariantDto[];
 }

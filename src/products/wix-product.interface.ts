@@ -6,4 +6,11 @@ export interface WixProductData {
     price: number;
   };
   description: string;
+  productOptions: {
+    name: string;
+    choices: {
+      value: string;
+      description: string;
+    }[];
+  }[];
 }

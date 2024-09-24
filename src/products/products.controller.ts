@@ -23,9 +23,7 @@ export class ProductsController {
 
   @Get()
   async products(): Promise<any> {
-    const a = await this.wixService.queryProducts();
-    console.log(a);
-    return a;
+    return this.wixService.queryProducts();
   }
 
   @Get(':id')
